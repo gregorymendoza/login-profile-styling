@@ -1,6 +1,10 @@
 @import "variables.scss";
 @import "general.scss";
 
+body {
+	height: 100vh;
+}
+
 #login {
 	background: url(../img/fullscreen_bg_image.jpg) no-repeat center top / cover;
 	height: 100vh;
@@ -12,7 +16,7 @@
 		border-radius: 4px;
 		box-shadow: 0px 4px 16px 0px rgba(58, 75, 93, 0.27);
 		width: 503px;
-		padding: 55px 50px 37px;
+		padding: 50px 50px 37px;
 		margin: 0 auto;
 	}
 
@@ -22,7 +26,7 @@
 		color: $text-primary;
 		border-bottom: 1px solid $line-primary;
 		padding-bottom: 32px;
-		margin-bottom: 64px;
+		margin-bottom: 52px;
 	}
 
 	.form__group {
@@ -32,7 +36,7 @@
 		.form__group__input {
 			font-size: 16px;
 			color: $text-primary;
-			padding: 10px 10px 10px 5px;
+			padding: 10px 10px 10px 0;
 			display: block;
 			width: 100%;
 			border: none;
@@ -44,7 +48,7 @@
 
 			&:focus ~ .form__group__label,
 			&:valid ~ .form__group__label {
-				top: -20px;
+				top: -13px;
 				font-size: 12px;
 				text-transform: uppercase;
   				color: $text-tertiary;
@@ -93,7 +97,7 @@
 		}
 
 		&--last {
-			margin-bottom: 34px;
+			margin-bottom: 30px;
 		}
 	}
 

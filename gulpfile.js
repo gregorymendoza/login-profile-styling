@@ -27,8 +27,8 @@ gulp.task('styles', () => {
 });
 
 // HTML task
-gulp.task('htmlmin', function() {
-  return gulp.src(htmlSrc)
+gulp.task('htmlmin', () => {
+  gulp.src(htmlSrc)
     .pipe(htmlmin({collapseWhitespace: true}))
     .pipe(gulp.dest(htmlDest))
     .pipe(livereload());

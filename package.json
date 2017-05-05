@@ -9,6 +9,7 @@
   },
   "devDependencies": {
     "babel": "^6.23.0",
+    "babel-cli": "^6.24.1",
     "babel-core": "^6.24.1",
     "babel-preset-es2015": "^6.24.1",
     "gulp": "^3.9.1",
@@ -23,6 +24,7 @@
     "webpack-dev-server": "^2.4.5"
   },
   "scripts": {
+    "babel": "babel --presets es2015 src/components/profile-header.comp.js -o dist/components/profile-header.comp.js",
     "dev": "webpack-dev-server",
     "prod": "webpack -p",
     "start": "http-server"
