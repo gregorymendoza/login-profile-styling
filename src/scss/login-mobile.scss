@@ -2,6 +2,7 @@
 @import "general.scss";
 
 body {
+	position: relative;
 	height: 100vh;
 }
 
@@ -10,7 +11,6 @@ body {
 	padding: 0;
 
 	.form {
-		position: relative;
 		display: block;
 		box-shadow: none;
 		width: 100%;
