@@ -26,7 +26,7 @@
   "scripts": {
     "babel": "babel --presets es2015 src/components/profile-header.comp.js -o dist/components/profile-header.comp.js",
     "dev": "webpack-dev-server",
-    "prod": "webpack -p",
+    "prod": "webpack -p --watch",
     "start": "http-server"
   },
   "repository": {

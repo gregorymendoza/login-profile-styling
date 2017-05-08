@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0">
 	<title>Front-End Test - Profile | About</title>
 	<link rel="stylesheet" href="css/profile.css">
 	<script src="js/custom-elements-es5-adapter.js"></script>
@@ -13,6 +13,63 @@
 <body>
 
 	<profile-header></profile-header>
+
+	<nav class="menu menu--scroll">
+		<span class="menu__item menu__item--current" data-tab="tab-1">About</span>
+		<span class="menu__item" data-tab="tab-2">Settings</span>
+		<span class="menu__item" data-tab="tab-3">Option1</span>
+		<span class="menu__item" data-tab="tab-4">Option2</span>
+		<span class="menu__item" data-tab="tab-5">Option3</span>
+	</nav>
+
+	<main class="tab-content">
+
+		<section id="tab-1" class="tab-content__pane tab-content__pane--current">
+			<h3 class="tab-content__pane__title">Profile info</h3>
+		</section>
+
+		<section id="tab-2" class="tab-content__pane">
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit asperiores modi quo assumenda perspiciatis nisi commodi voluptas accusamus, eum consequuntur, quia perferendis. Temporibus ad, quas. Error, quo dignissimos necessitatibus officiis.
+		</section>
+
+		<section id="tab-3" class="tab-content__pane">
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur non, commodi dolor explicabo, at eveniet voluptatum accusantium laudantium voluptas illo libero autem labore a fugiat nulla saepe optio sint velit.
+		</section>
+
+		<section id="tab-4" class="tab-content__pane">
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis officia rerum recusandae sint illo voluptatum quidem id praesentium quo deleniti, voluptate vitae dolor delectus ullam quasi eligendi ut et! Nisi.
+		</section>
+
+		<section id="tab-5" class="tab-content__pane">
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet placeat commodi molestiae soluta reiciendis, similique expedita sunt doloribus ad delectus repudiandae, quaerat molestias aspernatur aut omnis, eaque iste mollitia distinctio.
+		</section>
+
+	</main>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script src="js/app.bundle.js"></script>
+	<script>
+		$(document).ready(function() {
+
+			var tab = $('.menu__item');
+			var tabPane = $('.tab-content__pane');
+
+			tab.click(function() {
+				var tabID = $(this).attr('data-tab');
+				console.log(tabID);
+
+				tab.removeClass('menu__item--current');
+				tabPane.removeClass('tab-content__pane--current');
+
+				$(this).addClass('menu__item--current');
+				$("#"+tabID).addClass('tab-content__pane--current');
+			});
+
+			$('#tab-1').click(function() {
+				console.log('It works');
+			});
+		});
+	</script>
 
 </body>
 </html>

@@ -3,5 +3,129 @@
 
 body {
 	background-color: $bg-content;
-	padding: 70px 195px;
+	padding-top: 70px;
+	padding-bottom: 70px;
+}
+
+.menu {
+	background-color: $color-primary;
+	width: 100%;
+	border-top: 1px solid #f4f5f6;
+	box-shadow: 0px 1px 6px 0px rgba(114, 126, 136, 0.28);
+	max-width: 1180px;
+	padding-left: 222px;
+	margin: 0 auto;
+
+	&--scroll {
+		white-space: nowrap;
+		overflow-x: auto;
+		-webkit-overflow-scrolling: touch;
+		-ms-overflow-style: -ms-autohiding-scrollbar;
+	}
+
+	.menu__item {
+		position: relative;
+		display: inline-block;
+		vertical-align: middle;
+		text-transform: uppercase;
+		font-size: 15px;
+		color: $text-gray;
+		cursor: pointer;
+		padding: 20px 0;
+		margin-right: 20px;
+
+		&--current::after {
+			position: absolute;
+			content: '';
+			width: 100%;
+			height: 2px;
+			left: 0;
+			bottom: 0;
+			background-color: #028dfe;
+		}
+	}
+}
+
+.tab-content {
+	background-color: $color-primary;
+	border-radius: 3px;
+	box-shadow: 0px 1px 6px 0px rgba(114, 126, 136, 0.28);
+	max-width: 1180px;
+	min-height: 616px;
+	padding: 45px 40px;
+	margin: 37px auto 0;
+
+	.tab-content__pane {
+		display: none;
+
+		&--current {
+			display: inherit;
+		}
+
+		.tab-content__pane__title {
+			font-size: 24px;
+			font-weight: 400;
+			color: $gray;
+			margin-bottom: 22px;
+		}
+	}
+}
+
+.profile-info {
+	.profile-info__data {
+		display: table;
+		background-color: #f5f8f9;
+		height: 37px;
+		margin-bottom: 2px;
+
+    	.profile-info__data-content {
+			@include flex-centered;
+
+			.ion-edit {
+				font-size: 18px;
+				color: $gray;
+				background-color: $bg-icon;
+				cursor: pointer;
+				padding: 6.5px 14px;
+				margin-left: 14px;
+
+				&:hover {
+					color: $color-primary;
+					background-color: $brand-primary;
+				}
+			}
+	    }
+
+	    &:not(:first-child) {
+	    	i {
+	    		&:first-of-type {
+	    			font-size: 18px;
+	    			color: $text-secondary;
+	    			margin-right: 10px;
+	    		}
+	    	}
+	    }
+	}
+}
+
+/* Media Queries */
+@media screen and (min-width: 1200px) {
+	body {
+		padding-left: 195px;
+		padding-right: 195px;
+	}
+}
+
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+	body {
+		padding-left: 80px;
+		padding-right: 80px;
+	}
+}
+
+@media screen and (min-width: 890px) and (max-width: 991px) {
+	body {
+		padding-left: 40px;
+		padding-right: 40px;
+	}
 }

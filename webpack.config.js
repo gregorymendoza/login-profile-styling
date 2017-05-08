@@ -1,22 +1,25 @@
-var path = require('path');
-//var webpack = require('webpack');
+const path = require('path');
+      webpack = require('webpack'),
 
 module.exports = {
-	entry: './src/js/main.js',
+	context: path.resolve(__dirname, './src/js'),
+	entry: {
+		app: './app.js',
+	},
 	output: {
-		path: path.resolve(__dirname, 'dist/js'),
-		publicPath: '/',
-		filename: 'main.bundle.js'
+		path: path.resolve(__dirname, './dist/js'),
+		//publicPath: '/dist/',
+		filename: 'app.bundle.js'
 	},
 	module: {
-		loaders: [
+		rules: [
             {
                 test: /\.js$/,
-                exclude: /node_modules/,
-                loader: 'babel-loader',
-                query: {
-                    presets: ['es2015']
-                }
+                exclude: [/node_modules/],
+                use: [{
+                	loader: 'babel-loader',
+                	options: { presets: ['es2015'] }
+                }]
             }
         ]
 	},
@@ -29,4 +32,4 @@ module.exports = {
       	//	index: 'dist/index.html'
     	//}
 	}
-}
+};

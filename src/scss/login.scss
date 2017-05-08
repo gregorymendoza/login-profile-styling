@@ -47,7 +47,14 @@ body {
 			}
 
 			&:focus ~ .form__group__label,
-			&:invalid ~ .form__group__label {
+			&:valid ~ .form__group__label {
+				top: -13px;
+				font-size: 12px;
+				text-transform: uppercase;
+  				color: $text-tertiary;
+			}
+
+			&[type="email"]:active:invalid ~ .form__group__label {
 				top: -13px;
 				font-size: 12px;
 				text-transform: uppercase;
