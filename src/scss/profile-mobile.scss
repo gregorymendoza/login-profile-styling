@@ -1,0 +1,39 @@
+@import "variables.scss";
+@import "general.scss";
+
+body {
+	padding: 28px 0 0;
+}
+
+.menu {
+	padding-left: 19px;
+
+	.menu__item {
+		font-size: 14px;
+	}
+}
+
+.tab-content {
+	background-color: $bg-content;
+	box-shadow: none;
+	border-top: 1px solid $line-primary;
+	height: auto;
+	padding: 0 0 35px;
+	margin-top: 13px;
+
+	.tab-content__pane {
+		position: relative;
+		background-color: $color-primary;
+		padding: 18px 23px 35px;
+
+		&::after {
+			position: absolute;
+			content: '';
+			left: 0;
+			right: 0;
+			bottom: 0;
+			height: 1px;
+			background-color: $line-primary;
+		}
+	}
+}

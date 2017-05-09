@@ -14,13 +14,14 @@ class ProfileHeader extends HTMLElement {
 
 				<a href="#" class="header__btn-logout"><strong>Log Out</strong></a>
 
+				<div class="header-info__avatar"></div>
+
 				<div class="header__cover-upload">
 					<div class="header__cover-upload__label"><i class="ion-ios-camera"></i>Upload Cover Image</div>
 					<input type="file" name="upload" class="header__cover-upload__input">
 				</div>
 
 				<div class="header-info">
-					<div class="header-info__avatar"></div>
 					<div class="header-info__summary">
 						<h3 class="header-info__summary__title">Jessica Parker</h3>
 						<ul class="header-info__summary__contact">

@@ -6,6 +6,7 @@
 	<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0">
 	<title>Front-End Test - Profile | About</title>
 	<link rel="stylesheet" href="css/profile.css">
+	<link rel="stylesheet" href="css/profile-mobile.css" media="screen and (max-width: 889px)">
 	<script src="js/custom-elements-es5-adapter.js"></script>
 	<script src="js/webcomponents-loader.js"></script>
 	<script src="components/profile-header.comp.js"></script>
@@ -22,7 +23,7 @@
 		<span class="menu__item" data-tab="tab-5">Option3</span>
 	</nav>
 
-	<main class="tab-content">
+	<div class="tab-content">
 
 		<section id="tab-1" class="tab-content__pane tab-content__pane--current">
 			<h3 class="tab-content__pane__title">Profile info</h3>
@@ -44,7 +45,7 @@
 			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet placeat commodi molestiae soluta reiciendis, similique expedita sunt doloribus ad delectus repudiandae, quaerat molestias aspernatur aut omnis, eaque iste mollitia distinctio.
 		</section>
 
-	</main>
+	</div>
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 	<script src="js/app.bundle.js"></script>
@@ -55,19 +56,15 @@
 			var tabPane = $('.tab-content__pane');
 
 			tab.click(function() {
-				var tabID = $(this).attr('data-tab');
-				console.log(tabID);
+				var tabId = $(this).attr('data-tab');
 
 				tab.removeClass('menu__item--current');
 				tabPane.removeClass('tab-content__pane--current');
 
 				$(this).addClass('menu__item--current');
-				$("#"+tabID).addClass('tab-content__pane--current');
+				$("#" + tabId).addClass('tab-content__pane--current');
 			});
 
-			$('#tab-1').click(function() {
-				console.log('It works');
-			});
 		});
 	</script>
 
