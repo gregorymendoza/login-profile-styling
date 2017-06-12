@@ -6,6 +6,6 @@ Preview this project on GitHub pages: https://gregorymendoza.github.io/login-pro
 
 ## Technologies used
 
-● HTML5
-● CSS3 and SASS
-● ES6 and jQuery
+* HTML5
+* CSS3 and SASS
+* ES6 and jQuery
