@@ -54,13 +54,6 @@ body {
   				color: $text-tertiary;
 			}
 
-			&[type="email"]:active:invalid ~ .form__group__label {
-				top: -13px;
-				font-size: 12px;
-				text-transform: uppercase;
-  				color: $text-tertiary;
-			}
-
 			&:focus ~ .form__group__bar::before,
 			&:focus ~ .form__group__bar::after {
   				width: 50%;

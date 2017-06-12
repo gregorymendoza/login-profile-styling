@@ -5,15 +5,52 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0">
 	<title>Front-End Test - Profile | About</title>
+	<link rel="stylesheet" href="css/profile-header.css">
 	<link rel="stylesheet" href="css/profile.css">
 	<link rel="stylesheet" href="css/profile-mobile.css" media="screen and (max-width: 889px)">
-	<script src="js/custom-elements-es5-adapter.js"></script>
+	<!-- <script src="js/custom-elements-es5-adapter.js"></script>
 	<script src="js/webcomponents-loader.js"></script>
-	<script src="components/profile-header.comp.js"></script>
+	<script src="components/profile-header.comp.js"></script> -->
 </head>
 <body>
 
-	<profile-header></profile-header>
+	<!-- <profile-header></profile-header> -->
+
+	<header class="header">
+
+		<a href="#" class="header__btn-logout"><strong>Log Out</strong></a>
+
+		<div class="header-info__avatar"></div>
+
+		<div class="header__cover-upload">
+			<div class="header__cover-upload__label"><i class="ion-ios-camera"></i>Upload Cover Image</div>
+			<input type="file" name="upload" class="header__cover-upload__input">
+		</div>
+
+		<div class="header-info">
+			<div class="header-info__summary">
+				<h3 class="header-info__summary__title">Jessica Parker</h3>
+				<ul class="header-info__summary__contact">
+					<li><div><i class="ion-ios-location-outline"></i>Newport Beach, CA</div></li>
+					<li><div><i class="ion-ios-telephone-outline"></i><a href="tel:94932568594">(949) 325 - 68594</a></div></li>
+				</ul>
+			</div>
+			<ul class="header-info__rating">
+				<li><i class="ion-android-star"></i></li>
+				<li><i class="ion-android-star"></i></li>
+				<li><i class="ion-android-star"></i></li>
+				<li><i class="ion-android-star"></i></li>
+				<li><i class="ion-android-star-outline"></i></li>
+				<li><span>6</span>Reviews</li>
+			</ul>
+		</div>
+
+		<div class="header__followers">
+			<i class="ion-android-add-circle"></i>
+			<div><span>15</span> Followers</div>
+		</div>
+
+	</header>
 
 	<nav class="menu menu--scroll">
 		<span class="menu__item menu__item--current" data-tab="tab-1">About</span>
